@@ -8,4 +8,8 @@
 - Herencia
 - Uso de interfaces
 - Excepciones
-- Módulos
+- List, Set y Map
+- Lambdas
+- Streams
+- API JDBC
+- JUnit
