@@ -1,5 +1,8 @@
 # AF-JAVA
 
+https://dev.mysql.com/downloads/connector/j/
+https://dev.mysql.com/downloads/mysql/
+
 - Introducción al lenguaje Java
 - Tipos de datos y operadores
 - Sentencias de control
