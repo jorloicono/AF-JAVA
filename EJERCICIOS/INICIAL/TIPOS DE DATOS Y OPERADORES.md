@@ -5,7 +5,6 @@ La gravedad de la Luna es aproximadamente el 17% de la gravedad de la Tierra. Se
 1. Crear un programa que, dado un peso de la Tierra, calcule su equivalente en la Luna.
 2. El programa debe mostrar por pantalla un mensaje similar a este: “Un peso de 30 kilos en la Tierra equivalen a X kilos en la Luna”.
 
----
 
 ## Ejercicio 2: Operaciones matemáticas
 
