@@ -1,18 +1,26 @@
 # AF-JAVA
 
-https://dev.mysql.com/downloads/connector/j/
-https://dev.mysql.com/downloads/mysql/
+### Nivel Básico
 
-- Introducción al lenguaje Java
-- Tipos de datos y operadores
-- Sentencias de control
-- Vectores y cadenas de texto
-- Introducción a la Programación Orientada a Objetos: clases, objetos y métodos
-- Herencia
-- Uso de interfaces
-- Excepciones
-- List, Set y Map
-- Lambdas
-- Streams
-- API JDBC
-- JUnit
+- Introducción a Java
+- Introducción a la Programación Orientada a Objetos
+- Conceptos básicos de programación
+- Introducción a IntelliJ IDE
+- Java Virtual Machine (JVM)
+- Introducción a la Programación en Java
+- Arrays, Data Types y Operadores
+- Programación Orientada a Objetos en Java
+- Clases, Objetos, Métodos, Propiedades, Interfaces, Herencia
+- Reutilización de Código
+
+### Nivel Avanzado
+
+- Generics, Packages, Estructuras de Memoria
+- Multithreading en Java (Opcional)
+- Introducción al Acceso a Datos con Java
+- Creación de Componentes Reutilizables en Java
+- Servidores de Aplicaciones JAVA (JBoss, Wildfly)
+- Aplicaciones Cliente-Servidor (REST, SOAP)
+- Manejo de Dependencias y Empaquetamiento (Maven)
+- ORM con JavaEE
+- TDD con JUnit 5 y Mockito
