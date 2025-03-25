@@ -7,7 +7,7 @@ Crear un programa que lea caracteres desde teclado indefinidamente. Requisitos:
 3. El programa finalizará cuando el usuario introduzca un punto “.”.
 4. El programa imprimirá por consola el número total de espacios que se han introducido.
 
-## Ejercicio 5: Amstron
+## Ejercicio 5: Amstrong
 
 Desarrollar un programa que determine si un número es un número de Amstrong. Un número de Amstrong es aquel que es igual a la suma de sus dígitos elevados a la potencia de su número de cifras.
 
