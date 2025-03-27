@@ -19,3 +19,42 @@ Implementa métodos para:
 3. Obtener la cantidad de existencias de un producto dado su código.
 
 Además, asegúrate de manejar casos en los que se intenta agregar un producto que ya existe en el inventario.
+
+## Ejercicio– Uso de `TreeMap` con `Comparator` personalizado
+
+### Objetivo:
+Crear un `TreeMap` que almacene productos, ordenados por **precio** de menor a mayor. Si dos productos tienen el mismo precio, se ordenarán alfabéticamente por su nombre.
+
+###  Requisitos:
+1. Crea una clase `Producto` con los siguientes atributos:
+   - `String nombre`
+   - `double precio`
+
+2. Implementa un `Comparator<Producto>` que:
+   - Compare primero por el atributo `precio`.
+   - En caso de igualdad de precios, compare alfabéticamente por `nombre`.
+
+3. Inserta varios objetos `Producto` en un `TreeMap<Producto, Integer>`, donde el valor (`Integer`) puede representar la cantidad en stock.
+
+4. Recorre el mapa e imprime el contenido ordenado según el comparador.
+
+
+## Ejercicio – Comparar comportamiento de `equals()` y `hashCode()` en `HashSet`
+
+### Objetivo:
+Comprobar cómo funciona un `HashSet` al buscar objetos equivalentes y cómo afecta **no sobrescribir** o **sobrescribir correctamente** los métodos `equals()` y `hashCode()`.
+
+### Requisitos:
+1. Crea una clase `Libro` con los siguientes atributos:
+   - `String titulo`
+   - `String autor`
+
+2. Crea un `HashSet<Libro>` e inserta un libro cualquiera (por ejemplo: `"1984", "George Orwell"`).
+
+3. Comprueba si el conjunto contiene **otro libro diferente** con el mismo título y autor usando el método `contains()`.
+
+4. Realiza dos pruebas:
+   - Primero, **sin sobrescribir** `equals()` ni `hashCode()`: el resultado debería ser `false`.
+   - Luego, sobrescribe correctamente ambos métodos: el resultado ahora debería ser `true`.
+
+5. Reflexiona sobre por qué ocurre este comportamiento y cuál es la relación entre `equals()` y `hashCode()` en estructuras como `HashSet`.
