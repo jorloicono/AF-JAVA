@@ -16,7 +16,7 @@
 ### Nivel Avanzado
 
 - Generics, Packages, Estructuras de Memoria
-- Multithreading en Java (Opcional)
+- Multithreading en Java 
 - Introducción al Acceso a Datos con Java
 - Creación de Componentes Reutilizables en Java
 - Servidores de Aplicaciones JAVA (JBoss, Wildfly)
