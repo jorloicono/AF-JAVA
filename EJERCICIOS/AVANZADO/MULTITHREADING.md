@@ -1,26 +1,34 @@
-# Ejercicio 1: Creación y ejecución de hilos con `Runnable`
- 
-Crea una clase que implemente la interfaz `Runnable`. En el método `run()`, muestra un mensaje con el nombre del hilo actual y repítelo 5 veces usando un bucle `for`, haciendo que el hilo duerma 500 ms entre cada iteración.
+### Ejercicio 1: Sistema de Restauración con Múltiples Clientes
 
-Desde el `main`, crea y arranca al menos **dos hilos distintos** con nombres personalizados.  
-Observa el comportamiento concurrente de los mensajes en la consola.
+Imagina un sistema de cafetería donde varios clientes llegan a la vez y deben esperar para ser atendidos. Utiliza el semáforo para controlar el número máximo de clientes que pueden ser atendidos simultáneamente, y emplea hilos para representar a cada cliente. Cuando un cliente termine su servicio, liberará un permiso del semáforo para que otro cliente pueda ser atendido.
 
-# Ejercicio 2: Ciclo de vida de un hilo**
+#### Requerimientos:
+1. **Número de clientes (hilos)**: Crea varios hilos para representar a los clientes.
+2. **Semáforo**: Utiliza un semáforo para controlar el acceso al número máximo de asientos en la cafetería (por ejemplo, 10 asientos).
+3. **Sincronización**: Cada cliente debe esperar si todos los asientos están ocupados y entrar cuando haya espacio.
+4. **Tiempo de servicio**: Cada cliente es atendido por 3 segundos (simulado con `Thread.sleep()`).
+5. **Salir**: Después de ser atendido, el cliente debe liberar el semáforo para permitir que otro entre.
 
-Implementa un programa donde:
+#### Instrucciones:
+1. Crea un `Semaphore` con 10 permisos (uno por cada asiento disponible).
+2. Implementa una clase `Cliente` que extienda `Thread` y represente a un cliente en la cafetería.
+3. En el método `run` de la clase `Cliente`, adquiere un permiso del semáforo antes de ser atendido.
+4. Al finalizar la atención, libera el semáforo.
+5. Crea múltiples instancias de `Cliente` y lánzalas como hilos.
 
-1. Crees un hilo utilizando la clase `Thread`, sobrescribiendo el método `run()`.
-2. Dentro de `run()`, imprime un mensaje, duerme el hilo 2 segundos y vuelve a imprimir otro mensaje indicando que finalizó.
-3. En el `main`, crea el hilo, imprime su estado antes y después de llamar a `start()`, y después de que termine usando `getState()`.
+### Ejercicio 2: Procesamiento de Archivos en Paralelo
 
-Tu objetivo es **visualizar los cambios de estado del hilo**: `NEW`, `RUNNABLE`, `TERMINATED`.
+Simula un proceso donde varios hilos procesan archivos CSV grandes, cada uno analizando una parte del archivo. Utiliza una clase `Runnable` para manejar el procesamiento paralelo de los archivos, sincroniza el acceso a un recurso compartido y usa variables atómicas para contar el número de archivos procesados correctamente.
 
-# Ejercicio 3: Sincronización de métodos
-  
-Crea una clase `Contador` con un atributo entero `valor` inicializado a 0 y un método sincronizado `incrementar()` que aumente el valor en 1 y lo imprima por consola.
+#### Requerimientos:
+1. **Creación de Hilos**: Crea varios hilos, cada uno procesando una sección diferente de un archivo.
+2. **Sincronización**: Asegúrate de que el acceso a una variable compartida (como un contador) sea seguro mediante sincronización.
+3. **Atomic Variables**: Usa `AtomicInteger` para contar los archivos procesados correctamente.
+4. **Intercambio de Datos entre Hilos**: Usa `Exchanger` para que los hilos se comuniquen entre sí una vez que hayan terminado de procesar una parte del archivo.
+5. **Tiempos de Ejecución**: Cada hilo debe procesar una parte del archivo en un tiempo simulado de 2 segundos.
 
-Luego, crea una clase `HiloContador` que implemente `Runnable` y reciba una instancia de `Contador`.  
-Dentro del `run()`, ejecuta `incrementar()` 5 veces con una pausa de 100 ms.
-
-Desde el `main`, crea dos hilos que trabajen con el mismo objeto `Contador`.  
-**Sin la sincronización, deberían observarse errores de concurrencia.** Con `synchronized`, no deberían repetirse ni saltarse números.
+#### Instrucciones:
+1. Implementa un `Runnable` llamado `ProcesadorArchivo`, que simula el análisis de una sección del archivo CSV.
+2. Usa `AtomicInteger` para contar el número de archivos procesados correctamente.
+3. Utiliza `Exchanger` para intercambiar información entre hilos (por ejemplo, para reportar si un archivo fue procesado correctamente o no).
+4. Los hilos deben esperar a que todos terminen antes de mostrar el resultado final del procesamiento.
