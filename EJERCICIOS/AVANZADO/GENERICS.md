@@ -21,14 +21,49 @@ En el método `main`:
 - Llama a `compararListas` y muestra si las listas son iguales o no.  
 - Prueba el método con listas de enteros y listas de cadenas.
 
-# Ejercicio 3: Stack y Heap en Java
+# Ejercicio 3: Implementación de Pila en Java
 
-**Enunciado:**  
-Crea una clase llamada `Persona` con dos atributos: `String nombre` y `int edad`.  
-En el constructor, inicializa ambos atributos.
+## Objetivo
+Crear y comparar varias implementaciones de una **Pila** en Java, y poner a prueba su rendimiento y eficiencia.
 
-En la clase principal:
+## Parte 1: Implementación de la Pila
 
-- Declara varias variables primitivas (como `int x = 10`) y al menos un objeto de tipo `Persona`.  
-- Añade comentarios en el código indicando qué variables y objetos se almacenan en el **stack** y cuáles en el **heap**.  
-- Explica brevemente, en comentarios o en consola, cómo funciona la gestión de memoria en Java (stack vs heap).
+### 1. **Pila Básica con Nodos**
+Implementa la pila utilizando nodos donde cada nodo tiene un valor y referencia al siguiente nodo.
+
+- **Métodos principales**:
+  - `apilar()`
+  - `desapilar()`
+  - `peek()`
+  - `isEmpty()`
+  - `size()`
+
+### 2. **Pila Genérica**
+Crea una versión genérica de la pila utilizando **Generics** en Java para almacenar cualquier tipo de objeto.
+
+- **Métodos**:
+  - `apilar()`
+  - `desapilar()`
+  - `peek()`
+  - `isEmpty()`
+
+### 3. **Pila con `ArrayList`**
+Utiliza un **ArrayList** para almacenar los elementos de la pila.
+
+- **Métodos**:
+  - `apilar()`
+  - `desapilar()`
+  - `peek()`
+  - `isEmpty()`
+
+## Parte 2: Prueba de Rendimiento
+
+1. Apila y desapila **10 millones de elementos** con las tres implementaciones.
+2. Mide el tiempo de ejecución de cada operación utilizando `System.currentTimeMillis()`.
+
+## Parte 3: Evaluación
+
+- **Comparar Resultados**:
+  - ¿Cuál es la implementación más rápida?
+  - ¿Cuál tiene el mejor uso de memoria?
+  - ¿Cómo afectan las operaciones cuando el número de elementos es muy grande?
