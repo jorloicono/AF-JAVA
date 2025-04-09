@@ -1,10 +1,10 @@
-# 💻 Ejercicio: Conexión a Azure SQL Database con JDBC en Java
+# Conexión a Azure SQL Database con JDBC en Java
 
-## 🎯 Objetivo
+## Objetivo
 
 Desarrollar una aplicación Java que se conecte a una base de datos en **Azure SQL Database** usando **JDBC**. La aplicación deberá realizar operaciones de creación de tablas, inserción de datos, consultas, procedimientos almacenados y manejo de transacciones (`commit` y `rollback`).
 
-## 🔧 Requisitos
+## Requisitos
 
 1. ### Conexión a Azure SQL Database
    - Crea una base de datos en Azure SQL Database.
@@ -57,10 +57,3 @@ Desarrollar una aplicación Java que se conecte a una base de datos en **Azure S
    - Si alguna operación falla, realiza `rollback`.
    - Si todo funciona correctamente, ejecuta `commit`.
 
-
-## ✅ Criterios de Evaluación
-
-- Conexión correcta con Azure SQL Database.
-- Uso correcto de `PreparedStatement` y `CallableStatement`.
-- Implementación de `commit` y `rollback`.
-- Código limpio, bien estructurado y con manejo de errores adecuado.
